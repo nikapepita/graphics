@@ -1,3 +1,13 @@
+test <- read.csv2("C:/Users/annik/Desktop/test.csv")
+test$sort <- c("Potential Areas Greening","Greened Areas")
+test$prozent <- c("80.67","19.33")
+
+ggplot(test,aes(x=sort,y=prozent))+ geom_col(aes(fill=prozent)) + 
+  labs(x="",y="prozent",title="Networked Areas")+
+  scale_fill_manual(values=c("darkturquoise","darkslateblue"))
+
+
+
 library(ggplot2)
 library(magrittr)
 library(dplyr)
