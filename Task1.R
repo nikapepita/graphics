@@ -105,16 +105,17 @@ ggplot(emperors %>% arrange(dynasty, desc(reign)) %>%
           color="black",
           size=4,
           hjust=0)+
-  xlab("Period of reign in Days")+
-  ylab("Name of the Emperor")+
+  xlab("period of reign in days")+
+  ylab("name of the emperor")+
   theme(axis.line.y = element_blank(),
         legend.position = 1,
         panel.grid = element_blank(),
         plot.title = element_text(size=18, lineheight=0.9))+
-  labs(title = "How long did a Roman emperor rule?", subtitle=paste0("(Average reign periode:", round(mean(emperors$reign)), " days)"), 
+  labs(title = "How long did Roman Emperors rule?", subtitle=paste0("(Average reign periode:", round(mean(emperors$reign)), " days)"), 
        fill="Dynasty")+
   theme(legend.position="bottom")
 
+ggsave(filename = "Emperors.jpg",width=15, height=10)
 
 ####Pie Chart Task
 
@@ -152,11 +153,11 @@ data %>%
   theme_bw()+
   facet_wrap(~music,scales = "free_x") +
   labs(title = "Music Preferences in percent",
-       subtitle = "comparison between 1994 and 2014| source: Martin",
-       x = "Music Genre",
+       subtitle = "comparison between 1994 and 2014| source: ?",
+       x = "",
        fill = c("Year"))
 
-
+ggsave("music.jpg")
 
 
 
